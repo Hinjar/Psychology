@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
+import { PsyRouters } from "./routes/psy-routing/PsyRouters";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div></div>
+    <BrowserRouter>
+      <PsyRouters />
+    </BrowserRouter>
   );
 }
 

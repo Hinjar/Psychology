@@ -1,0 +1,14 @@
+.form{
+    max-width: 600px;
+    width: 100%;
+}
+
+.add-button{
+    margin: 15px 0 10px !important;
+}
+
+.form-title{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+}

@@ -1,13 +1,13 @@
-import React from  'react'
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import {Psychologist} from "../../pages";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import { Psychologist } from "../../pages";
+import { Admin } from "../../pages/admin/Admin";
 
 export const PsyRouters = () => {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/home" component={Psychologist} />
-            </Switch>
-        </BrowserRouter>
-    )
-}
+  return (
+    <Switch>
+      <Route path="/" component={Psychologist} />
+      <Route path="/admin" component={Admin} />
+    </Switch>
+  );
+};

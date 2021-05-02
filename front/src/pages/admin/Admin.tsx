@@ -5,9 +5,9 @@ import { PsyTableList } from "../../components/smart/psy-table-list/PsyTableList
 import { SnackbarContainer } from "../../containers/snackbar/Snackbar.container";
 import { Pagination } from "../../components/ordinary/pagination/Pagination";
 import { Footer } from "../../components/ordinary/footer/Footer";
-import "./Psychologist.css";
+import { PsyTableAdminList } from "../../components/smart/psy-table-admin-list/PsyTableAdminList";
 
-export const Psychologist = () => {
+export const Admin = () => {
   return (
     <>
       <Footer />
@@ -15,7 +15,7 @@ export const Psychologist = () => {
         <SnackbarContainer>
           <PsyInfo></PsyInfo>
           <Pagination></Pagination>
-          <PsyTableList></PsyTableList>
+          <PsyTableAdminList></PsyTableAdminList>
         </SnackbarContainer>
       </Container>
     </>

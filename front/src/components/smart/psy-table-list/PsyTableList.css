@@ -1,0 +1,12 @@
+.table-list-wrapper{
+  display: flex;
+  padding: 10px 0;
+}
+
+.table-list-time{
+  padding: 7px 16px 6px 16px;
+}
+
+.add{
+  margin-top: 15px !important;
+}
