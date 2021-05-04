@@ -9,6 +9,7 @@ export const PsyTableWindowList: React.FC<any> = ({
   handleCLose,
   handleClickOpen,
   children,
+  items,
 }) => {
   return (
     <>
@@ -20,7 +21,7 @@ export const PsyTableWindowList: React.FC<any> = ({
           container
           spacing={1}
         >
-          {[0, 1, 2].map((value) => (
+          {items.map((value: any) => (
             <Grid key={value} item>
               <PsyListWindowItem
                 handleClickOpen={() => handleClickOpen(false)}

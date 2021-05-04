@@ -12,7 +12,7 @@ export const Psychologist = () => {
   const [date, setDate] = useState(moment().format("LL"));
 
   console.log(date);
-  const [items, SetItems] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {}, []);
   return (
@@ -22,7 +22,7 @@ export const Psychologist = () => {
         <SnackbarContainer>
           <PsyInfo />
           <Pagination setDate={setDate} />
-          <PsyTableList />
+          <PsyTableList items={items} />
         </SnackbarContainer>
       </Container>
     </>

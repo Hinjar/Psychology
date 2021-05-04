@@ -1,20 +1,23 @@
 import React from "react";
-import { PsyTableWindowList } from "../psy-table-window-list/PsyTableWindowList";
 import "./PsyTableList.css";
-import { Grid, Paper } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import { PsyTableWindowListContainer } from "../../../containers/psy-table-window-list/PsyTableWindowList.container";
-import { useParams } from "react-router-dom";
 
-export const PsyTableList = () => {
+export const PsyTableList: React.FC<any> = ({ items }) => {
   return (
     <div>
-      {[0, 1, 2].map((e, index) => {
+      {items.map((e: any, index: any) => {
         return (
-          <Paper elevation={2} square={true} className="table-list-wrapper">
+          <Paper
+            key={index}
+            elevation={2}
+            square={true}
+            className="table-list-wrapper"
+          >
             <span className="table-list-time">
               <b>{e}:</b>
             </span>
-            <PsyTableWindowListContainer />
+            <PsyTableWindowListContainer items={e} />
           </Paper>
         );
       })}
