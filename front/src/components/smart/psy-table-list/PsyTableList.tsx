@@ -3,6 +3,7 @@ import { PsyTableWindowList } from "../psy-table-window-list/PsyTableWindowList"
 import "./PsyTableList.css";
 import { Grid, Paper } from "@material-ui/core";
 import { PsyTableWindowListContainer } from "../../../containers/psy-table-window-list/PsyTableWindowList.container";
+import { useParams } from "react-router-dom";
 
 export const PsyTableList = () => {
   return (

@@ -1,8 +1,18 @@
 import React from "react";
 import { Button, Grid, Paper } from "@material-ui/core";
 import "./Pagination.css";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import moment from "moment";
+import "moment/locale/ru";
 
-export const Pagination = () => {
+export const Pagination: React.FC<any> = ({ setDate }) => {
+  const { date }: any = useParams();
+
+  date && setDate(date);
+
+  moment.locale("ru");
+
   return (
     <Paper className="pagination-paper">
       <Grid
@@ -13,9 +23,17 @@ export const Pagination = () => {
         container
         spacing={1}
       >
-        <Button variant="outlined">{"<- 21 марта"}</Button>
-        <span>{"22 марта"}</span>
-        <Button variant="outlined">{"23 марта ->"}</Button>
+        <Link className="link" to={`/${moment(date).add(-1, "day")}`}>
+          <Button variant="outlined">
+            {moment(date).add(-1, "day").format("LL")}
+          </Button>
+        </Link>
+        <span>{moment(date).format("LL")}</span>
+        <Link className="link" to={`/${moment(date).add(1, "day")}`}>
+          <Button variant="outlined">
+            {moment(date).add(1, "day").format("LL")}
+          </Button>
+        </Link>
       </Grid>
     </Paper>
   );
